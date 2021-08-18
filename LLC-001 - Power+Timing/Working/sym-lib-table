@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Little-Logic-Computer---Power+Timing-rescue)(type Legacy)(uri "${KIPRJMOD}/Little Logic Computer - Power+Timing-rescue.lib")(options "")(descr ""))
+)

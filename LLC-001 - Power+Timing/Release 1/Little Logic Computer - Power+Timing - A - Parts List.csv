@@ -1,0 +1,77 @@
+Source:,C:\Users\rti97923\OneDrive - Science and Technology Facilities Council\Personal projects\Little Logic Computer\Little Logic Computer - Power+Timing\Little Logic Computer - Power+Timing.sch,,,,,,,,,,,,,
+Date:,18/01/2021 16:33,,,,,,,,,,,,,
+Tool:,Eeschema (5.1.5)-3,,,,,,,,,,,,,
+Generator:,C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py,,,,,,,,,,,,,
+Component Count:,46,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Individual Components:,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,Arrow Part Number,Arrow Price/Stock,Description,Height,Manufacturer_Name,Manufacturer_Part_Number,Mouser Part Number,Mouser Price/Stock
+,,C1,100n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C2,10n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C3,1u,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C4,10n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C5,100n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C6,10n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,C7,100n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+,,D1,LED,Device:LED,LED_SMD:LED_0603_1608Metric,~,,,,,,,,
+,,D2,LED,Device:LED,LED_SMD:LED_0603_1608Metric,~,,,,,,,,
+,,D3,LED,Device:LED,LED_SMD:LED_0603_1608Metric,~,,,,,,,,
+,,D4,LED,Device:LED,LED_SMD:LED_0603_1608Metric,~,,,,,,,,
+,,H1,MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,,,,,,,
+,,H2,MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,,,,,,,
+,,H3,MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,,,,,,,
+,,H4,MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,,,,,,,
+,,J1,Conn_01x02,Connector_Generic:Conn_01x02,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~,,,,,,,,
+,,J2,Conn_02x10_Odd_Even,Connector_Generic:Conn_02x10_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical,~,,,,,,,,
+,,J3,Conn_02x10_Odd_Even,Connector_Generic:Conn_02x10_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical,~,,,,,,,,
+,,J4,USB_B_Mini,Connector:USB_B_Mini,Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal,~,,,,,,,,
+,,R1,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R2,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R3,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R4,1M,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R5,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R6,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R7,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R8,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R9,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,R10,1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+,,RV1,1M,Device:R_POT,Potentiometer_SMD:Potentiometer_Bourns_3214J_Horizontal,~,,,,,,,,
+,,SW1,SW_Push,Switch:SW_Push,Button_Switch_SMD:Panasonic_EVQPUK_EVQPUB,~,,,,,,,,
+,,SW2,SW_SPDT,Switch:SW_SPDT,Button_Switch_SMD:SW_SPDT_PCM12,~,,,,,,,,
+,,U1,LM555,Timer:LM555,Package_SO:SO-8_3.9x4.9mm_P1.27mm,http://www.ti.com/lit/ds/symlink/lm555.pdf,,,,,,,,
+,,U2,LM555,Timer:LM555,Package_SO:SO-8_3.9x4.9mm_P1.27mm,http://www.ti.com/lit/ds/symlink/lm555.pdf,,,,,,,,
+,,U3,LM555,Timer:LM555,Package_SO:SO-8_3.9x4.9mm_P1.27mm,http://www.ti.com/lit/ds/symlink/lm555.pdf,,,,,,,,
+,,U4,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U5,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U6,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U7,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U8,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U9,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U10,SN74LVC1G02DBVR,Ryans_kicad_lib:SN74LVC1G02DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g02,SN74LVC1G02DBVR,https://www.arrow.com/en/products/sn74lvc1g02dbvr/texas-instruments,Single 2-Input Positive-NOR Gate,1.45,Texas Instruments,SN74LVC1G02DBVR,595-SN74LVC1G02DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G02DBVR?qs=nqigI8dpoHI5xDzQYPorCA%3D%3D
+,,U11,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U12,SN74LVC1G02DBVR,Ryans_kicad_lib:SN74LVC1G02DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g02,SN74LVC1G02DBVR,https://www.arrow.com/en/products/sn74lvc1g02dbvr/texas-instruments,Single 2-Input Positive-NOR Gate,1.45,Texas Instruments,SN74LVC1G02DBVR,595-SN74LVC1G02DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G02DBVR?qs=nqigI8dpoHI5xDzQYPorCA%3D%3D
+,,U13,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,U14,SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Collated Components:,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,Arrow Part Number,Arrow Price/Stock,Description,Height,Manufacturer_Name,Manufacturer_Part_Number,Mouser Part Number,Mouser Price/Stock
+1,3,"C1, C5, C7",100n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+2,3,"C2, C4, C6",10n,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+3,1,C3,1u,Device:C,Capacitor_SMD:C_0603_1608Metric,~,,,,,,,,
+4,4,"D1, D2, D3, D4",LED,Device:LED,LED_SMD:LED_0603_1608Metric,~,,,,,,,,
+5,4,"H1, H2, H3, H4",MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3.2mm_M3,~,,,,,,,,
+6,1,J1,Conn_01x02,Connector_Generic:Conn_01x02,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~,,,,,,,,
+7,2,"J2, J3",Conn_02x10_Odd_Even,Connector_Generic:Conn_02x10_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical,~,,,,,,,,
+8,1,J4,USB_B_Mini,Connector:USB_B_Mini,Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal,~,,,,,,,,
+9,9,"R1, R2, R3, R5, R6, R7, R8, R9, R10",1K,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+10,1,R4,1M,Device:R,Resistor_SMD:R_0603_1608Metric,~,,,,,,,,
+11,1,RV1,1M,Device:R_POT,Potentiometer_SMD:Potentiometer_Bourns_3214J_Horizontal,~,,,,,,,,
+12,1,SW1,SW_Push,Switch:SW_Push,Button_Switch_SMD:Panasonic_EVQPUK_EVQPUB,~,,,,,,,,
+13,1,SW2,SW_SPDT,Switch:SW_SPDT,Button_Switch_SMD:SW_SPDT_PCM12,~,,,,,,,,
+14,3,"U1, U2, U3",LM555,Timer:LM555,Package_SO:SO-8_3.9x4.9mm_P1.27mm,http://www.ti.com/lit/ds/symlink/lm555.pdf,,,,,,,,
+15,9,"U4, U5, U6, U7, U8, U9, U11, U13, U14",SN74LVC1G00DBVR,Ryans_kicad_lib:SN74LVC1G00DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g00,SN74LVC1G00DBVR,https://www.arrow.com/en/products/sn74lvc1g00dbvr/texas-instruments,Single 2-Input Positive-NAND Gate,1.45,Texas Instruments,SN74LVC1G00DBVR,595-SN74LVC1G00DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G00DBVR?qs=UGVLDq%2F29uhdv3KxGq5%252BeQ%3D%3D
+16,2,"U10, U12",SN74LVC1G02DBVR,Ryans_kicad_lib:SN74LVC1G02DBVR,Package_TO_SOT_SMD:SOT-23-5_HandSoldering,http://www.ti.com/lit/gpn/sn74lvc1g02,SN74LVC1G02DBVR,https://www.arrow.com/en/products/sn74lvc1g02dbvr/texas-instruments,Single 2-Input Positive-NOR Gate,1.45,Texas Instruments,SN74LVC1G02DBVR,595-SN74LVC1G02DBVR,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN74LVC1G02DBVR?qs=nqigI8dpoHI5xDzQYPorCA%3D%3D

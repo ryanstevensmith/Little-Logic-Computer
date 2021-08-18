@@ -1,0 +1,1516 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "LLC-001 - Power + Timing"
+Date "2021-05-06"
+Rev "2.0"
+Comp "Indie Robotics"
+Comment1 "Drawn by Ryan Smith"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 6001A42F
+P 850 1050
+F 0 "J1" H 768 725 50  0000 C CNN
+F 1 "Conn_01x02" H 768 816 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 850 1050 50  0001 C CNN
+F 3 "~" H 850 1050 50  0001 C CNN
+	1    850  1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 6001BC87
+P 1350 750
+F 0 "#PWR0101" H 1350 600 50  0001 C CNN
+F 1 "VCC" H 1367 923 50  0000 C CNN
+F 2 "" H 1350 750 50  0001 C CNN
+F 3 "" H 1350 750 50  0001 C CNN
+	1    1350 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6001C132
+P 1350 1250
+F 0 "#PWR0102" H 1350 1000 50  0001 C CNN
+F 1 "GND" H 1355 1077 50  0000 C CNN
+F 2 "" H 1350 1250 50  0001 C CNN
+F 3 "" H 1350 1250 50  0001 C CNN
+	1    1350 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 950  1350 950 
+Wire Wire Line
+	1350 950  1350 800 
+Wire Wire Line
+	1050 1050 1350 1050
+Wire Wire Line
+	1350 1050 1350 1200
+Wire Wire Line
+	1600 850  1600 800 
+Wire Wire Line
+	1600 800  1350 800 
+Connection ~ 1350 800 
+Wire Wire Line
+	1350 800  1350 750 
+Wire Wire Line
+	1350 1200 1600 1200
+Wire Wire Line
+	1600 1200 1600 1150
+Connection ~ 1350 1200
+Wire Wire Line
+	1350 1200 1350 1250
+$Comp
+L Little-Logic-Computer---Power+Timing-rescue:LM555-Timer U1
+U 1 1 60001D21
+P 3000 1750
+F 0 "U1" H 3150 2250 50  0000 C CNN
+F 1 "LM555" H 3200 2150 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 3000 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 3000 1750 50  0001 C CNN
+F 4 "yes" H 3000 1750 50  0001 C CNN "Generic Part"
+F 5 "NE555DR" H 3000 1750 50  0001 C CNN "Part Number"
+F 6 "Texas Instruments" H 3000 1750 50  0001 C CNN "Manufacturer"
+F 7 "Timer SOIC-8_150mil RoHS" H 3000 1750 50  0001 C CNN "Description"
+	1    3000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Little-Logic-Computer---Power+Timing-rescue:LM555-Timer U2
+U 1 1 600083B2
+P 6000 1750
+F 0 "U2" H 6150 2250 50  0000 C CNN
+F 1 "LM555" H 6200 2150 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6000 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 6000 1750 50  0001 C CNN
+F 4 "Timer SOIC-8_150mil RoHS" H 6000 1750 50  0001 C CNN "Description"
+F 5 "yes" H 6000 1750 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 6000 1750 50  0001 C CNN "Manufacturer"
+F 7 "NE555DR" H 6000 1750 50  0001 C CNN "Part Number"
+	1    6000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 6000B9C3
+P 3000 1000
+F 0 "#PWR0103" H 3000 850 50  0001 C CNN
+F 1 "VCC" H 3017 1173 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 6000C07C
+P 6000 1000
+F 0 "#PWR0104" H 6000 850 50  0001 C CNN
+F 1 "VCC" H 6017 1173 50  0000 C CNN
+F 2 "" H 6000 1000 50  0001 C CNN
+F 3 "" H 6000 1000 50  0001 C CNN
+	1    6000 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1000 3000 1100
+Wire Wire Line
+	3000 1100 3600 1100
+Wire Wire Line
+	3600 1100 3600 1150
+Wire Wire Line
+	3600 1450 3600 1750
+Wire Wire Line
+	3600 1750 3500 1750
+Wire Wire Line
+	3600 1750 3700 1750
+Connection ~ 3600 1750
+Wire Wire Line
+	3000 1100 3000 1200
+Connection ~ 3000 1100
+Wire Wire Line
+	3000 1200 2400 1200
+Wire Wire Line
+	2400 1200 2400 1950
+Wire Wire Line
+	2400 1950 2500 1950
+Connection ~ 3000 1200
+Wire Wire Line
+	3000 1200 3000 1350
+$Comp
+L Device:R_POT RV1
+U 1 1 600112B4
+P 4250 1750
+F 0 "RV1" H 4180 1704 50  0000 R CNN
+F 1 "1M" H 4180 1795 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3339P_Vertical" H 4250 1750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1810170824_BOCHEN-Chengdu-Guosheng-Tech-3323P-1-105_C125006.pdf" H 4250 1750 50  0001 C CNN
+F 4 "3323P-1-105" H 4250 1750 50  0001 C CNN "Part Number"
+F 5 "no" H 4250 1750 50  0001 C CNN "Generic Part"
+F 6 "BOCHEN" H 4250 1750 50  0001 C CNN "Manufacturer"
+F 7 "1M ±10% ±250ppm/℃ 3323P Precision Potentiometer RoHS" H 4250 1750 50  0001 C CNN "Description"
+	1    4250 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4000 1750 4100 1750
+NoConn ~ 4250 1600
+Wire Wire Line
+	3500 1950 3550 1950
+Wire Wire Line
+	3550 1950 3550 2250
+Wire Wire Line
+	3550 2250 4250 2250
+Wire Wire Line
+	4250 2250 4250 1900
+Wire Wire Line
+	3550 2250 2600 2250
+Wire Wire Line
+	2300 2250 2300 1550
+Wire Wire Line
+	2300 1550 2500 1550
+Connection ~ 3550 2250
+Wire Wire Line
+	2600 2350 2600 2250
+Connection ~ 2600 2250
+Wire Wire Line
+	2600 2250 2300 2250
+Wire Wire Line
+	2200 2350 2200 1750
+Wire Wire Line
+	2200 1750 2500 1750
+$Comp
+L power:GND #PWR0106
+U 1 1 60016BD2
+P 2600 2850
+F 0 "#PWR0106" H 2600 2600 50  0001 C CNN
+F 1 "GND" H 2605 2677 50  0000 C CNN
+F 2 "" H 2600 2850 50  0001 C CNN
+F 3 "" H 2600 2850 50  0001 C CNN
+	1    2600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2650 2200 2750
+Wire Wire Line
+	2200 2750 2600 2750
+Wire Wire Line
+	2600 2750 2600 2850
+Wire Wire Line
+	2600 2650 2600 2750
+Connection ~ 2600 2750
+Wire Wire Line
+	2600 2750 3000 2750
+Wire Wire Line
+	3000 2750 3000 2150
+Wire Wire Line
+	6500 1950 6600 1950
+Wire Wire Line
+	6600 1950 6600 2050
+Wire Wire Line
+	6500 1750 6600 1750
+Wire Wire Line
+	6600 1750 6600 1950
+Connection ~ 6600 1950
+Wire Wire Line
+	5500 1750 5300 1750
+Wire Wire Line
+	5300 1750 5300 2050
+Wire Wire Line
+	5500 1950 5400 1950
+Wire Wire Line
+	5400 1950 5400 1100
+Wire Wire Line
+	5400 1100 5200 1100
+Wire Wire Line
+	5400 1100 6000 1100
+Wire Wire Line
+	6000 1100 6000 1000
+Connection ~ 5400 1100
+Wire Wire Line
+	6000 1350 6000 1100
+Connection ~ 6000 1100
+Wire Wire Line
+	6000 1100 6600 1100
+Wire Wire Line
+	6600 1100 6600 1150
+Wire Wire Line
+	5200 1100 5200 1150
+Wire Wire Line
+	6600 1750 6600 1450
+Connection ~ 6600 1750
+Wire Wire Line
+	5200 1450 5200 1550
+Wire Wire Line
+	5200 1550 5500 1550
+Wire Wire Line
+	3500 1550 4500 1550
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6002F816
+P 4900 1550
+F 0 "SW1" H 4900 1835 50  0000 C CNN
+F 1 "SW_Push" H 4900 1744 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 4900 1750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1912111437_C-K-PTS645VK832LFS_C285521.pdf" H 4900 1750 50  0001 C CNN
+F 4 "Tactile Switches small sized s Light Touch Switch" H 4900 1550 50  0001 C CNN "Description"
+F 5 "yes" H 4900 1550 50  0001 C CNN "Generic Part"
+F 6 "C&K" H 4900 1550 50  0001 C CNN "Manufacturer"
+F 7 "PTS645VK832LFS" H 4900 1550 50  0001 C CNN "Part Number"
+	1    4900 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1550 5100 1550
+Connection ~ 5200 1550
+Wire Wire Line
+	4700 1550 4600 1550
+Wire Wire Line
+	4600 1550 4600 2450
+Wire Wire Line
+	4600 2450 5300 2450
+Wire Wire Line
+	5300 2450 5300 2350
+Wire Wire Line
+	5300 2450 5650 2450
+Wire Wire Line
+	6000 2450 6000 2150
+Connection ~ 5300 2450
+Wire Wire Line
+	6000 2450 6600 2450
+Wire Wire Line
+	6600 2450 6600 2350
+Connection ~ 6000 2450
+$Comp
+L power:GND #PWR0107
+U 1 1 600397D8
+P 5650 2550
+F 0 "#PWR0107" H 5650 2300 50  0001 C CNN
+F 1 "GND" H 5655 2377 50  0000 C CNN
+F 2 "" H 5650 2550 50  0001 C CNN
+F 3 "" H 5650 2550 50  0001 C CNN
+	1    5650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2550 5650 2450
+Connection ~ 5650 2450
+Wire Wire Line
+	5650 2450 6000 2450
+Wire Wire Line
+	6500 1550 7000 1550
+Wire Wire Line
+	4500 1550 4500 3000
+$Comp
+L power:GND #PWR0131
+U 1 1 602B6C43
+P 3500 3000
+F 0 "#PWR0131" H 3500 2750 50  0001 C CNN
+F 1 "GND" H 3505 2827 50  0000 C CNN
+F 2 "" H 3500 3000 50  0001 C CNN
+F 3 "" H 3500 3000 50  0001 C CNN
+	1    3500 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 3000 3600 3000
+Wire Wire Line
+	3900 3000 4100 3000
+Wire Wire Line
+	6400 3000 6600 3000
+Wire Wire Line
+	6000 3000 6100 3000
+$Comp
+L power:GND #PWR0132
+U 1 1 602C3839
+P 6000 3000
+F 0 "#PWR0132" H 6000 2750 50  0001 C CNN
+F 1 "GND" H 6005 2827 50  0000 C CNN
+F 2 "" H 6000 3000 50  0001 C CNN
+F 3 "" H 6000 3000 50  0001 C CNN
+	1    6000 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 1550 7000 3000
+Wire Wire Line
+	6900 3000 7000 3000
+Wire Wire Line
+	4400 3000 4500 3000
+Wire Wire Line
+	9400 3000 9500 3000
+$Comp
+L power:GND #PWR0133
+U 1 1 602DADF5
+P 8500 3000
+F 0 "#PWR0133" H 8500 2750 50  0001 C CNN
+F 1 "GND" H 8505 2827 50  0000 C CNN
+F 2 "" H 8500 3000 50  0001 C CNN
+F 3 "" H 8500 3000 50  0001 C CNN
+	1    8500 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8500 3000 8600 3000
+Wire Wire Line
+	8900 3000 9100 3000
+Wire Wire Line
+	9500 1550 9500 3000
+Connection ~ 8750 1100
+Wire Wire Line
+	8750 1100 8750 1350
+NoConn ~ 9250 1750
+Wire Wire Line
+	9250 1550 9500 1550
+Connection ~ 8750 2500
+Wire Wire Line
+	9350 1950 9250 1950
+Wire Wire Line
+	9350 2500 9350 1950
+Wire Wire Line
+	8750 2500 9350 2500
+Connection ~ 8000 2500
+Wire Wire Line
+	8750 2500 8750 2150
+Wire Wire Line
+	8000 2500 8750 2500
+Wire Wire Line
+	8000 2500 8000 2400
+Wire Wire Line
+	7250 2500 8000 2500
+Wire Wire Line
+	7250 1850 7250 2500
+Wire Wire Line
+	7350 1850 7250 1850
+Wire Wire Line
+	8000 1750 8000 2100
+Wire Wire Line
+	8250 1750 8000 1750
+Connection ~ 8150 1950
+Wire Wire Line
+	8150 1950 7750 1950
+Wire Wire Line
+	8150 1950 8250 1950
+Wire Wire Line
+	8150 1450 8150 1950
+Wire Wire Line
+	7850 1550 7850 1750
+Connection ~ 7850 1550
+Wire Wire Line
+	8250 1550 7850 1550
+Wire Wire Line
+	7850 1750 7750 1750
+Wire Wire Line
+	7850 1450 7850 1550
+Connection ~ 8150 1100
+Wire Wire Line
+	7850 1100 8150 1100
+Wire Wire Line
+	7850 1150 7850 1100
+Wire Wire Line
+	8750 1100 8750 1000
+Wire Wire Line
+	8150 1100 8750 1100
+Wire Wire Line
+	8150 1150 8150 1100
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 60049DEF
+P 7550 1850
+F 0 "SW2" H 7550 2135 50  0000 C CNN
+F 1 "SW_SPDT" H 7550 2044 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_CK-JS102011SAQN" H 7550 1850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2004181004_Yuandi-TA-3525-A3_C514020.pdf" H 7550 1850 50  0001 C CNN
+F 4 "SMD,9.1x3.5x4.0mm Toggle Switches RoHS" H 7550 1850 50  0001 C CNN "Description"
+F 5 "yes" H 7550 1850 50  0001 C CNN "Generic Part"
+F 6 "Yuandi" H 7550 1850 50  0001 C CNN "Manufacturer"
+F 7 "TA-3525-A3" H 7550 1850 50  0001 C CNN "Part Number"
+	1    7550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0105
+U 1 1 6000C79A
+P 8750 1000
+F 0 "#PWR0105" H 8750 850 50  0001 C CNN
+F 1 "VCC" H 8767 1173 50  0000 C CNN
+F 2 "" H 8750 1000 50  0001 C CNN
+F 3 "" H 8750 1000 50  0001 C CNN
+	1    8750 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Little-Logic-Computer---Power+Timing-rescue:LM555-Timer U3
+U 1 1 60009472
+P 8750 1750
+F 0 "U3" H 8900 2250 50  0000 C CNN
+F 1 "LM555" H 8950 2150 50  0000 C CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8750 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 8750 1750 50  0001 C CNN
+F 4 "Timer SOIC-8_150mil RoHS" H 8750 1750 50  0001 C CNN "Description"
+F 5 "yes" H 8750 1750 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 8750 1750 50  0001 C CNN "Manufacturer"
+F 7 "NE555DR" H 8750 1750 50  0001 C CNN "Part Number"
+	1    8750 1750
+	1    0    0    -1  
+$EndComp
+Text Label 1850 5950 2    50   ~ 0
+HLT
+Wire Wire Line
+	10500 4300 10150 4300
+Text Label 10150 4300 0    50   ~ 0
+~CLK
+Wire Wire Line
+	10500 4200 10150 4200
+Text Label 10150 4200 0    50   ~ 0
+CLK
+$Comp
+L power:GND #PWR0134
+U 1 1 60443DEA
+P 10400 4500
+F 0 "#PWR0134" H 10400 4250 50  0001 C CNN
+F 1 "GND" H 10405 4327 50  0000 C CNN
+F 2 "" H 10400 4500 50  0001 C CNN
+F 3 "" H 10400 4500 50  0001 C CNN
+	1    10400 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 4400 10400 4500
+$Comp
+L power:VCC #PWR0136
+U 1 1 6005A216
+P 1600 3300
+F 0 "#PWR0136" H 1600 3150 50  0001 C CNN
+F 1 "VCC" H 1617 3473 50  0000 C CNN
+F 2 "" H 1600 3300 50  0001 C CNN
+F 3 "" H 1600 3300 50  0001 C CNN
+	1    1600 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0137
+U 1 1 6005B1CE
+P 1150 4200
+F 0 "#PWR0137" H 1150 3950 50  0001 C CNN
+F 1 "GND" H 1155 4027 50  0000 C CNN
+F 2 "" H 1150 4200 50  0001 C CNN
+F 3 "" H 1150 4200 50  0001 C CNN
+	1    1150 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 4000 1100 4100
+Wire Wire Line
+	1100 4100 1150 4100
+Wire Wire Line
+	1200 4100 1200 4000
+Wire Wire Line
+	1150 4200 1150 4100
+Connection ~ 1150 4100
+Wire Wire Line
+	1150 4100 1200 4100
+Wire Wire Line
+	1500 3400 1600 3400
+Wire Wire Line
+	1600 3400 1600 3300
+Wire Wire Line
+	1600 3400 1700 3400
+Wire Wire Line
+	1700 3400 1700 3500
+Connection ~ 1600 3400
+$Comp
+L power:GND #PWR0138
+U 1 1 6008FD80
+P 1700 3900
+F 0 "#PWR0138" H 1700 3650 50  0001 C CNN
+F 1 "GND" H 1705 3727 50  0000 C CNN
+F 2 "" H 1700 3900 50  0001 C CNN
+F 3 "" H 1700 3900 50  0001 C CNN
+	1    1700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3800 1700 3900
+NoConn ~ 1500 3600
+NoConn ~ 1500 3700
+NoConn ~ 1500 3800
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6004BF61
+P 9950 800
+F 0 "H1" H 10050 846 50  0000 L CNN
+F 1 "MountingHole" H 10050 755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 800 50  0001 C CNN
+F 3 "~" H 9950 800 50  0001 C CNN
+	1    9950 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6004D01A
+P 9950 1000
+F 0 "H2" H 10050 1046 50  0000 L CNN
+F 1 "MountingHole" H 10050 955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1000 50  0001 C CNN
+F 3 "~" H 9950 1000 50  0001 C CNN
+	1    9950 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6005A10A
+P 9950 1200
+F 0 "H3" H 10050 1246 50  0000 L CNN
+F 1 "MountingHole" H 10050 1155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1200 50  0001 C CNN
+F 3 "~" H 9950 1200 50  0001 C CNN
+	1    9950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 60067313
+P 9950 1400
+F 0 "H4" H 10050 1446 50  0000 L CNN
+F 1 "MountingHole" H 10050 1355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9950 1400 50  0001 C CNN
+F 3 "~" H 9950 1400 50  0001 C CNN
+	1    9950 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Ryans_kicad_lib:USB_B_Mini J4
+U 1 1 600B2A2F
+P 1200 3600
+F 0 "J4" H 1257 4067 50  0000 C CNN
+F 1 "USB_B_Mini" H 1257 3976 50  0000 C CNN
+F 2 "Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 3200 3800 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1811141116_Korean-Hroparts-Elec-U-M-M5SS-W-2_C91144.pdf" H 1350 3550 50  0001 C CNN
+F 4 "USB Connector, Mini USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle" H 3800 3700 50  0001 C CNN "Description"
+F 5 "Korean Hroparts Elec" H 2400 4000 50  0001 C CNN "Manufacturer"
+F 6 "U-M-M5SS-W-2" H 2300 3900 50  0001 C CNN "Part Number"
+F 7 "no" H 1200 3600 50  0001 C CNN "Generic Part"
+	1    1200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C1
+U 1 1 609001E4
+P 1600 1000
+F 0 "C1" H 1715 1046 50  0000 L CNN
+F 1 "100n" H 1715 955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2500 900 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 1600 1000 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 2250 1200 50  0001 C CNN "Part Number"
+F 5 "no" H 1900 800 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 2250 1100 50  0001 C CNN "Description"
+F 7 "KEMET" H 2000 700 50  0001 C CNN "Manufacturer"
+	1    1600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C2
+U 1 1 60900848
+P 1700 3650
+F 0 "C2" H 1815 3696 50  0000 L CNN
+F 1 "100n" H 1815 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2600 3550 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 1700 3650 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 2350 3850 50  0001 C CNN "Part Number"
+F 5 "no" H 2000 3450 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 2350 3750 50  0001 C CNN "Description"
+F 7 "KEMET" H 2100 3350 50  0001 C CNN "Manufacturer"
+	1    1700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:100n_0603 C6
+U 1 1 6090877E
+P 6600 2200
+F 0 "C6" H 6715 2246 50  0000 L CNN
+F 1 "100n" H 6715 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7500 2100 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C104J5RACTU.pdf" H 6600 2200 50  0001 C CNN
+F 4 "C0603C104J5RACTU" H 7250 2400 50  0001 C CNN "Part Number"
+F 5 "no" H 6900 2000 50  0001 C CNN "Generic Part"
+F 6 "100n, 0603, X7R, 50V" H 7250 2300 50  0001 C CNN "Description"
+F 7 "KEMET" H 7000 1900 50  0001 C CNN "Manufacturer"
+	1    6600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:1u_0603 C4
+U 1 1 609269F6
+P 2600 2500
+F 0 "C4" H 2715 2546 50  0000 L CNN
+F 1 "1u" H 2715 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3500 2400 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C105K8RACTU.pdf" H 2600 2500 50  0001 C CNN
+F 4 "C0603C105K8RACTU" H 3250 2700 50  0001 C CNN "Part Number"
+F 5 "no" H 2900 2300 50  0001 C CNN "Generic Part"
+F 6 "1u, 0603, X7R, 10V" H 3250 2600 50  0001 C CNN "Description"
+F 7 "KEMET" H 3000 2200 50  0001 C CNN "Manufacturer"
+	1    2600 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vishay_Res_SMD:1K_0603 R1
+U 1 1 6093FE53
+P 3600 1300
+F 0 "R1" H 3670 1346 50  0000 L CNN
+F 1 "1K" H 3670 1255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4450 1350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 3600 1300 50  0001 C CNN
+F 4 "CRCW06031K00FKEAHP" H 4250 1550 50  0001 C CNN "Part Number"
+F 5 "no" H 3900 1100 50  0001 C CNN "Generic Part"
+F 6 "1K, 0603, 1%, 0.33W" H 4250 1450 50  0001 C CNN "Description"
+F 7 "Vishay" H 3950 1250 50  0001 C CNN "Manufacturer"
+	1    3600 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vishay_Res_SMD:1K_0603 R3
+U 1 1 609413B1
+P 3850 1750
+F 0 "R3" V 3750 1800 50  0000 C CNN
+F 1 "1K" V 3750 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4700 1800 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 3850 1750 50  0001 C CNN
+F 4 "CRCW06031K00FKEAHP" H 4500 2000 50  0001 C CNN "Part Number"
+F 5 "no" H 4150 1550 50  0001 C CNN "Generic Part"
+F 6 "1K, 0603, 1%, 0.33W" H 4500 1900 50  0001 C CNN "Description"
+F 7 "Vishay" H 4200 1700 50  0001 C CNN "Manufacturer"
+	1    3850 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:1K_0603 R4
+U 1 1 60941C63
+P 5200 1300
+F 0 "R4" H 5130 1254 50  0000 R CNN
+F 1 "1K" H 5130 1345 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6050 1350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 5200 1300 50  0001 C CNN
+F 4 "CRCW06031K00FKEAHP" H 5850 1550 50  0001 C CNN "Part Number"
+F 5 "no" H 5500 1100 50  0001 C CNN "Generic Part"
+F 6 "1K, 0603, 1%, 0.33W" H 5850 1450 50  0001 C CNN "Description"
+F 7 "Vishay" H 5550 1250 50  0001 C CNN "Manufacturer"
+	1    5200 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vishay_Res_SMD:1K_0603 R7
+U 1 1 60942D34
+P 7850 1300
+F 0 "R7" H 7920 1346 50  0000 L CNN
+F 1 "1K" H 7920 1255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8700 1350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 7850 1300 50  0001 C CNN
+F 4 "CRCW06031K00FKEAHP" H 8500 1550 50  0001 C CNN "Part Number"
+F 5 "no" H 8150 1100 50  0001 C CNN "Generic Part"
+F 6 "1K, 0603, 1%, 0.33W" H 8500 1450 50  0001 C CNN "Description"
+F 7 "Vishay" H 8200 1250 50  0001 C CNN "Manufacturer"
+	1    7850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vishay_Res_SMD:1K_0603 R8
+U 1 1 6094372E
+P 8150 1300
+F 0 "R8" H 8220 1346 50  0000 L CNN
+F 1 "1K" H 8220 1255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9000 1350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 8150 1300 50  0001 C CNN
+F 4 "CRCW06031K00FKEAHP" H 8800 1550 50  0001 C CNN "Part Number"
+F 5 "no" H 8450 1100 50  0001 C CNN "Generic Part"
+F 6 "1K, 0603, 1%, 0.33W" H 8800 1450 50  0001 C CNN "Description"
+F 7 "Vishay" H 8500 1250 50  0001 C CNN "Manufacturer"
+	1    8150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kingbright:LED_Green_0603 D1
+U 1 1 60950FE0
+P 4250 3000
+F 0 "D1" H 4243 3217 50  0000 C CNN
+F 1 "LED_Green" H 4243 3126 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 5300 3350 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 4250 3000 50  0001 C CNN
+F 4 "APT1608SGC" H 4900 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 4700 3150 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 4950 3050 50  0001 C CNN "Description"
+F 7 "Kingbright" H 4850 2950 50  0001 C CNN "Manufacturer"
+	1    4250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kingbright:LED_Green_0603 D2
+U 1 1 60951D3B
+P 6750 3000
+F 0 "D2" H 6743 3217 50  0000 C CNN
+F 1 "LED_Green" H 6743 3126 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 7800 3350 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 6750 3000 50  0001 C CNN
+F 4 "APT1608SGC" H 7400 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 7200 3150 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 7450 3050 50  0001 C CNN "Description"
+F 7 "Kingbright" H 7350 2950 50  0001 C CNN "Manufacturer"
+	1    6750 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kingbright:LED_Green_0603 D3
+U 1 1 60955EBB
+P 9250 3000
+F 0 "D3" H 9243 3217 50  0000 C CNN
+F 1 "LED_Green" H 9243 3126 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 10300 3350 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 9250 3000 50  0001 C CNN
+F 4 "APT1608SGC" H 9900 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 9700 3150 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 9950 3050 50  0001 C CNN "Description"
+F 7 "Kingbright" H 9850 2950 50  0001 C CNN "Manufacturer"
+	1    9250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vishay_Res_SMD:1M_0603 R6
+U 1 1 6095EC46
+P 6600 1300
+F 0 "R6" H 6670 1346 50  0000 L CNN
+F 1 "1M" H 6670 1255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7450 1350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 6600 1300 50  0001 C CNN
+F 4 "CRCW06031M00FKEAHP" H 7250 1550 50  0001 C CNN "Part Number"
+F 5 "no" H 6900 1100 50  0001 C CNN "Generic Part"
+F 6 "1M, 0603, 1%, 0.33W" H 7250 1450 50  0001 C CNN "Description"
+F 7 "Vishay" H 6950 1250 50  0001 C CNN "Manufacturer"
+	1    6600 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5950 1850 5950
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 6097258B
+P 1300 6050
+F 0 "J2" H 1218 5725 50  0000 C CNN
+F 1 "Conn_01x02" H 1218 5816 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1300 6050 50  0001 C CNN
+F 3 "~" H 1300 6050 50  0001 C CNN
+	1    1300 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 60981B74
+P 1600 6150
+F 0 "#PWR01" H 1600 5900 50  0001 C CNN
+F 1 "GND" H 1605 5977 50  0000 C CNN
+F 2 "" H 1600 6150 50  0001 C CNN
+F 3 "" H 1600 6150 50  0001 C CNN
+	1    1600 6150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6150 1600 6050
+Wire Wire Line
+	1600 6050 1500 6050
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 6098A674
+P 10700 4300
+F 0 "J3" H 10618 3875 50  0000 C CNN
+F 1 "Conn_01x04" H 10800 3950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10700 4300 50  0001 C CNN
+F 3 "~" H 10700 4300 50  0001 C CNN
+	1    10700 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10400 4400 10500 4400
+Wire Wire Line
+	10400 4100 10400 4000
+$Comp
+L power:VCC #PWR020
+U 1 1 609B68D4
+P 10400 4000
+F 0 "#PWR020" H 10400 3850 50  0001 C CNN
+F 1 "VCC" H 10417 4173 50  0000 C CNN
+F 2 "" H 10400 4000 50  0001 C CNN
+F 3 "" H 10400 4000 50  0001 C CNN
+	1    10400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 4100 10400 4100
+$Comp
+L 74xGxx:74LVC1G86 U4
+U 1 1 609C1A8A
+P 3750 5000
+F 0 "U4" H 3850 5300 50  0000 L CNN
+F 1 "74LVC1G86" H 3850 5200 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3750 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3750 5000 50  0001 C CNN
+F 4 "Single 2-Input Exclusive-OR Gate" H 3750 5000 50  0001 C CNN "Description"
+F 5 "yes" H 3750 5000 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 3750 5000 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G86DBVR" H 3750 5000 50  0001 C CNN "Part Number"
+	1    3750 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 609C457C
+P 3750 4800
+F 0 "#PWR04" H 3750 4650 50  0001 C CNN
+F 1 "VCC" H 3767 4973 50  0000 C CNN
+F 2 "" H 3750 4800 50  0001 C CNN
+F 3 "" H 3750 4800 50  0001 C CNN
+	1    3750 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4900 3750 4800
+$Comp
+L power:GND #PWR05
+U 1 1 609C9038
+P 3750 5200
+F 0 "#PWR05" H 3750 4950 50  0001 C CNN
+F 1 "GND" H 3755 5027 50  0000 C CNN
+F 2 "" H 3750 5200 50  0001 C CNN
+F 3 "" H 3750 5200 50  0001 C CNN
+	1    3750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5200 3750 5100
+$Comp
+L 74xGxx:74LVC1G08 U7
+U 1 1 609CE258
+P 4750 4950
+F 0 "U7" H 4850 5250 50  0000 L CNN
+F 1 "74LVC1G08" H 4850 5150 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4750 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 4750 4950 50  0001 C CNN
+F 4 "Single 2-Input Positive-AND Gate" H 4750 4950 50  0001 C CNN "Description"
+F 5 "yes" H 4750 4950 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 4750 4950 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G08DBVR" H 4750 4950 50  0001 C CNN "Part Number"
+	1    4750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR010
+U 1 1 609D0215
+P 4750 4750
+F 0 "#PWR010" H 4750 4600 50  0001 C CNN
+F 1 "VCC" H 4767 4923 50  0000 C CNN
+F 2 "" H 4750 4750 50  0001 C CNN
+F 3 "" H 4750 4750 50  0001 C CNN
+	1    4750 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4850 4750 4750
+$Comp
+L power:GND #PWR011
+U 1 1 609D48F2
+P 4750 5150
+F 0 "#PWR011" H 4750 4900 50  0001 C CNN
+F 1 "GND" H 4755 4977 50  0000 C CNN
+F 2 "" H 4750 5150 50  0001 C CNN
+F 3 "" H 4750 5150 50  0001 C CNN
+	1    4750 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 5150 4750 5050
+$Comp
+L 74xGxx:74LVC1G32 U8
+U 1 1 609D9338
+P 5750 4450
+F 0 "U8" H 5800 4750 50  0000 L CNN
+F 1 "74LVC1G32" H 5800 4650 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5750 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 5750 4450 50  0001 C CNN
+F 4 "Single 2-Input Positive-OR Gate" H 5750 4450 50  0001 C CNN "Description"
+F 5 "yes" H 5750 4450 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 5750 4450 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G32DBVR" H 5750 4450 50  0001 C CNN "Part Number"
+	1    5750 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR012
+U 1 1 609DA8D3
+P 5750 4250
+F 0 "#PWR012" H 5750 4100 50  0001 C CNN
+F 1 "VCC" H 5767 4423 50  0000 C CNN
+F 2 "" H 5750 4250 50  0001 C CNN
+F 3 "" H 5750 4250 50  0001 C CNN
+	1    5750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4350 5750 4250
+$Comp
+L power:GND #PWR013
+U 1 1 609DF0CF
+P 5750 4650
+F 0 "#PWR013" H 5750 4400 50  0001 C CNN
+F 1 "GND" H 5755 4477 50  0000 C CNN
+F 2 "" H 5750 4650 50  0001 C CNN
+F 3 "" H 5750 4650 50  0001 C CNN
+	1    5750 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4650 5750 4550
+$Comp
+L 74xGxx:74LVC1G86 U5
+U 1 1 609E3AAE
+P 3750 6000
+F 0 "U5" H 3850 6300 50  0000 L CNN
+F 1 "74LVC1G86" H 3850 6200 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3750 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3750 6000 50  0001 C CNN
+F 4 "Single 2-Input Exclusive-OR Gate" H 3750 6000 50  0001 C CNN "Description"
+F 5 "yes" H 3750 6000 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 3750 6000 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G86DBVR" H 3750 6000 50  0001 C CNN "Part Number"
+	1    3750 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR06
+U 1 1 609E3F28
+P 3750 5800
+F 0 "#PWR06" H 3750 5650 50  0001 C CNN
+F 1 "VCC" H 3767 5973 50  0000 C CNN
+F 2 "" H 3750 5800 50  0001 C CNN
+F 3 "" H 3750 5800 50  0001 C CNN
+	1    3750 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5900 3750 5800
+$Comp
+L power:GND #PWR07
+U 1 1 609E3F33
+P 3750 6200
+F 0 "#PWR07" H 3750 5950 50  0001 C CNN
+F 1 "GND" H 3755 6027 50  0000 C CNN
+F 2 "" H 3750 6200 50  0001 C CNN
+F 3 "" H 3750 6200 50  0001 C CNN
+	1    3750 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 6200 3750 6100
+$Comp
+L 74xGxx:74LVC1G08 U6
+U 1 1 609F426C
+P 4750 3950
+F 0 "U6" H 4850 4250 50  0000 L CNN
+F 1 "74LVC1G08" H 4850 4150 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4750 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 4750 3950 50  0001 C CNN
+F 4 "Single 2-Input Positive-AND Gate" H 4750 3950 50  0001 C CNN "Description"
+F 5 "yes" H 4750 3950 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 4750 3950 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G08DBVR" H 4750 3950 50  0001 C CNN "Part Number"
+	1    4750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 609F4722
+P 4750 3750
+F 0 "#PWR08" H 4750 3600 50  0001 C CNN
+F 1 "VCC" H 4767 3923 50  0000 C CNN
+F 2 "" H 4750 3750 50  0001 C CNN
+F 3 "" H 4750 3750 50  0001 C CNN
+	1    4750 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3850 4750 3750
+$Comp
+L power:GND #PWR09
+U 1 1 609F472D
+P 4750 4150
+F 0 "#PWR09" H 4750 3900 50  0001 C CNN
+F 1 "GND" H 4755 3977 50  0000 C CNN
+F 2 "" H 4750 4150 50  0001 C CNN
+F 3 "" H 4750 4150 50  0001 C CNN
+	1    4750 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4150 4750 4050
+$Comp
+L 74xGxx:74LVC1G08 U9
+U 1 1 60A040D8
+P 6750 4500
+F 0 "U9" H 6850 4800 50  0000 L CNN
+F 1 "74LVC1G08" H 6850 4700 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6750 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 6750 4500 50  0001 C CNN
+F 4 "Single 2-Input Positive-AND Gate" H 6750 4500 50  0001 C CNN "Description"
+F 5 "yes" H 6750 4500 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 6750 4500 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G08DBVR" H 6750 4500 50  0001 C CNN "Part Number"
+	1    6750 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR014
+U 1 1 60A045CA
+P 6750 4300
+F 0 "#PWR014" H 6750 4150 50  0001 C CNN
+F 1 "VCC" H 6767 4473 50  0000 C CNN
+F 2 "" H 6750 4300 50  0001 C CNN
+F 3 "" H 6750 4300 50  0001 C CNN
+	1    6750 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4400 6750 4300
+$Comp
+L power:GND #PWR015
+U 1 1 60A045D5
+P 6750 4700
+F 0 "#PWR015" H 6750 4450 50  0001 C CNN
+F 1 "GND" H 6755 4527 50  0000 C CNN
+F 2 "" H 6750 4700 50  0001 C CNN
+F 3 "" H 6750 4700 50  0001 C CNN
+	1    6750 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4700 6750 4600
+$Comp
+L 74xGxx:74LVC1G86 U10
+U 1 1 60A0A79E
+P 8250 4000
+F 0 "U10" H 8350 4300 50  0000 L CNN
+F 1 "74LVC1G86" H 8350 4200 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8250 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 8250 4000 50  0001 C CNN
+F 4 "Single 2-Input Exclusive-OR Gate" H 8250 4000 50  0001 C CNN "Description"
+F 5 "yes" H 8250 4000 50  0001 C CNN "Generic Part"
+F 6 "Texas Instruments" H 8250 4000 50  0001 C CNN "Manufacturer"
+F 7 "SN74LVC1G86DBVR" H 8250 4000 50  0001 C CNN "Part Number"
+	1    8250 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR018
+U 1 1 60A0ACDA
+P 8250 3800
+F 0 "#PWR018" H 8250 3650 50  0001 C CNN
+F 1 "VCC" H 8267 3973 50  0000 C CNN
+F 2 "" H 8250 3800 50  0001 C CNN
+F 3 "" H 8250 3800 50  0001 C CNN
+	1    8250 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3900 8250 3800
+$Comp
+L power:GND #PWR019
+U 1 1 60A0ACE5
+P 8250 4200
+F 0 "#PWR019" H 8250 3950 50  0001 C CNN
+F 1 "GND" H 8255 4027 50  0000 C CNN
+F 2 "" H 8250 4200 50  0001 C CNN
+F 3 "" H 8250 4200 50  0001 C CNN
+	1    8250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4200 8250 4100
+$Comp
+L power:VCC #PWR02
+U 1 1 60A130C2
+P 3350 4850
+F 0 "#PWR02" H 3350 4700 50  0001 C CNN
+F 1 "VCC" H 3367 5023 50  0000 C CNN
+F 2 "" H 3350 4850 50  0001 C CNN
+F 3 "" H 3350 4850 50  0001 C CNN
+	1    3350 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 4950 3350 4850
+Wire Wire Line
+	3450 4950 3350 4950
+$Comp
+L power:VCC #PWR03
+U 1 1 60A1D90B
+P 3350 5850
+F 0 "#PWR03" H 3350 5700 50  0001 C CNN
+F 1 "VCC" H 3367 6023 50  0000 C CNN
+F 2 "" H 3350 5850 50  0001 C CNN
+F 3 "" H 3350 5850 50  0001 C CNN
+	1    3350 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5950 3350 5850
+Wire Wire Line
+	3450 5950 3350 5950
+$Comp
+L power:VCC #PWR016
+U 1 1 60A2865E
+P 7850 3850
+F 0 "#PWR016" H 7850 3700 50  0001 C CNN
+F 1 "VCC" H 7867 4023 50  0000 C CNN
+F 2 "" H 7850 3850 50  0001 C CNN
+F 3 "" H 7850 3850 50  0001 C CNN
+	1    7850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3950 7850 3850
+Wire Wire Line
+	7950 3950 7850 3950
+Wire Wire Line
+	4000 5000 4450 5000
+Wire Wire Line
+	5000 4950 5350 4950
+Wire Wire Line
+	5350 4950 5350 4500
+Wire Wire Line
+	5350 4500 5450 4500
+Wire Wire Line
+	5450 4400 5350 4400
+Wire Wire Line
+	5350 4400 5350 3950
+Wire Wire Line
+	5350 3950 5000 3950
+Wire Wire Line
+	6000 4450 6450 4450
+Wire Wire Line
+	6450 4550 6400 4550
+Wire Wire Line
+	6400 4550 6400 6000
+Wire Wire Line
+	6400 6000 4000 6000
+Wire Wire Line
+	3450 6050 3000 6050
+Text Label 3000 6050 0    50   ~ 0
+HLT
+Wire Wire Line
+	7000 4500 7850 4500
+Wire Wire Line
+	7850 4500 7850 4050
+Wire Wire Line
+	7850 4050 7950 4050
+Wire Wire Line
+	8500 4000 9000 4000
+Wire Wire Line
+	7850 4500 9000 4500
+Connection ~ 7850 4500
+Text Label 9000 4500 2    50   ~ 0
+CLK
+Text Label 9000 4000 2    50   ~ 0
+~CLK
+$Comp
+L Kingbright:LED_Green_0603 D4
+U 1 1 60A79415
+P 7850 4750
+F 0 "D4" V 7889 4632 50  0000 R CNN
+F 1 "LED_Green" V 7798 4632 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 8900 5100 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 7850 4750 50  0001 C CNN
+F 4 "APT1608SGC" H 8500 5000 50  0001 C CNN "Part Number"
+F 5 "no" H 8300 4900 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 8550 4800 50  0001 C CNN "Description"
+F 7 "Kingbright" H 8450 4700 50  0001 C CNN "Manufacturer"
+	1    7850 4750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R2
+U 1 1 60A8E5DB
+P 3750 3000
+F 0 "R2" V 3543 3000 50  0000 C CNN
+F 1 "330R" V 3634 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4600 3050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 3750 3000 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 4400 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 4050 2800 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 4400 3150 50  0001 C CNN "Description"
+F 7 "Vishay" H 4100 2950 50  0001 C CNN "Manufacturer"
+	1    3750 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R5
+U 1 1 60A8F49F
+P 6250 3000
+F 0 "R5" V 6043 3000 50  0000 C CNN
+F 1 "330R" V 6134 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7100 3050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 6250 3000 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 6900 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 6550 2800 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 6900 3150 50  0001 C CNN "Description"
+F 7 "Vishay" H 6600 2950 50  0001 C CNN "Manufacturer"
+	1    6250 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R10
+U 1 1 60A903F1
+P 8750 3000
+F 0 "R10" V 8543 3000 50  0000 C CNN
+F 1 "330R" V 8634 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9600 3050 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 8750 3000 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 9400 3250 50  0001 C CNN "Part Number"
+F 5 "no" H 9050 2800 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 9400 3150 50  0001 C CNN "Description"
+F 7 "Vishay" H 9100 2950 50  0001 C CNN "Manufacturer"
+	1    8750 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R9
+U 1 1 60A90C50
+P 7850 5250
+F 0 "R9" H 7780 5204 50  0000 R CNN
+F 1 "330R" H 7780 5295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8700 5300 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 7850 5250 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 8500 5500 50  0001 C CNN "Part Number"
+F 5 "no" H 8150 5050 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 8500 5400 50  0001 C CNN "Description"
+F 7 "Vishay" H 8200 5200 50  0001 C CNN "Manufacturer"
+	1    7850 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 60A91D04
+P 7850 5500
+F 0 "#PWR017" H 7850 5250 50  0001 C CNN
+F 1 "GND" H 7855 5327 50  0000 C CNN
+F 2 "" H 7850 5500 50  0001 C CNN
+F 3 "" H 7850 5500 50  0001 C CNN
+	1    7850 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 5500 7850 5400
+Wire Wire Line
+	7850 5100 7850 4900
+Wire Wire Line
+	7850 4600 7850 4500
+Wire Wire Line
+	4500 3000 4500 3250
+Wire Wire Line
+	4250 3250 4250 3900
+Wire Wire Line
+	4250 3900 4450 3900
+Wire Wire Line
+	4250 3250 4500 3250
+Connection ~ 4500 3000
+Wire Wire Line
+	7000 3000 7000 3350
+Wire Wire Line
+	7000 3350 4350 3350
+Wire Wire Line
+	4350 3350 4350 4900
+Wire Wire Line
+	4350 4900 4450 4900
+Connection ~ 7000 3000
+Wire Wire Line
+	3450 5050 3050 5050
+Wire Wire Line
+	3050 5050 3050 4000
+Wire Wire Line
+	3050 4000 4450 4000
+Wire Wire Line
+	3050 4000 3050 3450
+Wire Wire Line
+	3050 3450 9500 3450
+Wire Wire Line
+	9500 3450 9500 3000
+Connection ~ 3050 4000
+Connection ~ 9500 3000
+$Comp
+L power:GND #PWR0108
+U 1 1 60AF875B
+P 8000 2600
+F 0 "#PWR0108" H 8000 2350 50  0001 C CNN
+F 1 "GND" H 8005 2427 50  0000 C CNN
+F 2 "" H 8000 2600 50  0001 C CNN
+F 3 "" H 8000 2600 50  0001 C CNN
+	1    8000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2600 8000 2500
+$Comp
+L KEMET_SMD:10n_0603 C3
+U 1 1 60B6E8AD
+P 2200 2500
+F 0 "C3" H 2315 2546 50  0000 L CNN
+F 1 "10n" H 2315 2455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3100 2400 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103J5RACTU.pdf" H 2200 2500 50  0001 C CNN
+F 4 "C0603C103J5RACTU" H 2850 2700 50  0001 C CNN "Part Number"
+F 5 "no" H 2500 2300 50  0001 C CNN "Generic Part"
+F 6 "10n, 0603, X7R, 50V" H 2850 2600 50  0001 C CNN "Description"
+F 7 "KEMET" H 2600 2200 50  0001 C CNN "Manufacturer"
+	1    2200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:10n_0603 C5
+U 1 1 60B6F90A
+P 5300 2200
+F 0 "C5" H 5415 2246 50  0000 L CNN
+F 1 "10n" H 5415 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6200 2100 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103J5RACTU.pdf" H 5300 2200 50  0001 C CNN
+F 4 "C0603C103J5RACTU" H 5950 2400 50  0001 C CNN "Part Number"
+F 5 "no" H 5600 2000 50  0001 C CNN "Generic Part"
+F 6 "10n, 0603, X7R, 50V" H 5950 2300 50  0001 C CNN "Description"
+F 7 "KEMET" H 5700 1900 50  0001 C CNN "Manufacturer"
+	1    5300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L KEMET_SMD:10n_0603 C7
+U 1 1 60B70A51
+P 8000 2250
+F 0 "C7" H 8115 2296 50  0000 L CNN
+F 1 "10n" H 8115 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8900 2150 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C0603C103J5RACTU.pdf" H 8000 2250 50  0001 C CNN
+F 4 "C0603C103J5RACTU" H 8650 2450 50  0001 C CNN "Part Number"
+F 5 "no" H 8300 2050 50  0001 C CNN "Generic Part"
+F 6 "10n, 0603, X7R, 50V" H 8650 2350 50  0001 C CNN "Description"
+F 7 "KEMET" H 8400 1950 50  0001 C CNN "Manufacturer"
+	1    8000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Kingbright:LED_Green_0603 D6
+U 1 1 60BC416A
+P 1850 6200
+F 0 "D6" V 1889 6082 50  0000 R CNN
+F 1 "LED_Green" V 1798 6082 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2900 6550 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SGC-32861.pdf" H 1850 6200 50  0001 C CNN
+F 4 "APT1608SGC" H 2500 6450 50  0001 C CNN "Part Number"
+F 5 "no" H 2300 6350 50  0001 C CNN "Generic Part"
+F 6 "Green 0603 LED" H 2550 6250 50  0001 C CNN "Description"
+F 7 "Kingbright" H 2450 6150 50  0001 C CNN "Manufacturer"
+	1    1850 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Vishay_Res_SMD:330R_0603 R12
+U 1 1 60BC474E
+P 1850 6700
+F 0 "R12" H 1780 6654 50  0000 R CNN
+F 1 "330R" H 1780 6745 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2700 6750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 1850 6700 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 2500 6950 50  0001 C CNN "Part Number"
+F 5 "no" H 2150 6500 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 2500 6850 50  0001 C CNN "Description"
+F 7 "Vishay" H 2200 6650 50  0001 C CNN "Manufacturer"
+	1    1850 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 60BC4758
+P 1850 6950
+F 0 "#PWR0109" H 1850 6700 50  0001 C CNN
+F 1 "GND" H 1855 6777 50  0000 C CNN
+F 2 "" H 1850 6950 50  0001 C CNN
+F 3 "" H 1850 6950 50  0001 C CNN
+	1    1850 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6950 1850 6850
+Wire Wire Line
+	1850 6550 1850 6350
+Wire Wire Line
+	1850 6050 1850 5950
+$Comp
+L Vishay_Res_SMD:330R_0603 R11
+U 1 1 60BD83B4
+P 1000 2500
+F 0 "R11" H 930 2454 50  0000 R CNN
+F 1 "330R" H 930 2545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1850 2550 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 1000 2500 50  0001 C CNN
+F 4 "CRCW0603330RFKEAHP" H 1650 2750 50  0001 C CNN "Part Number"
+F 5 "no" H 1300 2300 50  0001 C CNN "Generic Part"
+F 6 "330R, 0603, 1%, 0.33W" H 1650 2650 50  0001 C CNN "Description"
+F 7 "Vishay" H 1350 2450 50  0001 C CNN "Manufacturer"
+	1    1000 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 60BD83BA
+P 1000 2750
+F 0 "#PWR0110" H 1000 2500 50  0001 C CNN
+F 1 "GND" H 1005 2577 50  0000 C CNN
+F 2 "" H 1000 2750 50  0001 C CNN
+F 3 "" H 1000 2750 50  0001 C CNN
+	1    1000 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2750 1000 2650
+$Comp
+L Kingbright:LED_Red_0603 D5
+U 1 1 60BE155A
+P 1000 2000
+F 0 "D5" V 1039 1882 50  0000 R CNN
+F 1 "LED_Red" V 948 1882 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2050 2350 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/216/APT1608SRCPRV-226086.pdf" H 1000 2000 50  0001 C CNN
+F 4 "APT1608SRCPRV" H 1650 2250 50  0001 C CNN "Part Number"
+F 5 "no" H 1450 2150 50  0001 C CNN "Generic Part"
+F 6 "Red 0603 LED" H 1700 2050 50  0001 C CNN "Description"
+F 7 "Kingbright" H 1600 1950 50  0001 C CNN "Manufacturer"
+	1    1000 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 60BE2ACE
+P 1000 1750
+F 0 "#PWR0111" H 1000 1600 50  0001 C CNN
+F 1 "VCC" H 1017 1923 50  0000 C CNN
+F 2 "" H 1000 1750 50  0001 C CNN
+F 3 "" H 1000 1750 50  0001 C CNN
+	1    1000 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1750 1000 1850
+Wire Wire Line
+	1000 2150 1000 2350
+$EndSCHEMATC
